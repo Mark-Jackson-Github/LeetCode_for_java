@@ -9,26 +9,22 @@ public class BubbleSort {
     /**
      * 冒泡排序
      */
-    public static void main(String[] args) {
-
-        int[] arr = {2,3,1,6,7,4,10,9,8};
-        int[] sort = bubbleSort(arr);
-        System.out.printf(sort.toString());
-
-    }
-
-    private static int[] bubbleSort(int[] arr) {
+    public int[] bubbleSort(int[] arr) {
         int len = arr.length;
-        for (int i = 0; i < len - 1; i++) {
-            for (int j = 0; j < len - 1 - i; j++) {
-                if (arr[j] > arr[j+1]) {        // 相邻元素两两对比
-                    int temp = arr[j+1];        // 元素交换
+        //第一层循环保证每个元素都可以进行遍历一遍
+        for (int i = 0; i < len; i++) {
+            //内层循环就是为了保证每个第一层被选择的元素都和之后的元素进行比较
+            for (int j = 0; j < len-1-i ; j++) {
+                int temp;
+                //发现相邻元素的前一个大于后一个，则进行位置交换。
+                if (arr[j] > arr[j+1]){
+                    temp = arr[j+1];
                     arr[j+1] = arr[j];
                     arr[j] = temp;
                 }
             }
+
         }
         return arr;
     }
-
 }

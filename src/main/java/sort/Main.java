@@ -13,11 +13,23 @@ public class Main {
         int[] arr = {2,4,1,8,3,9,7,6,5};
 
         //方法调用
-        SelectionSort selectionSort = new SelectionSort();
-        int[] sortArr = selectionSort.selection(arr);
+        //BubbleSort bubbleSort = new BubbleSort();
+        //SelectionSort selectionSort = new SelectionSort();
+        QuickSort quickSort = new QuickSort();
+
+        //方法实现
+        //冒泡排序
+        //int[] sortArr = bubbleSort.bubbleSort(arr);
+        //快速排序
+        int[] sortArr = quickSort.quick(arr,0,arr.length-1);
+        //选择排序
+        //int[] sortArr = selectionSort.selection(arr);
+
 
         //输出排序验证
-        System.out.printf(arr.toString());
+        for (int i = 0; i < sortArr.length; i++) {
+            System.out.print(arr[i]);
+        }
 
     }
 }

@@ -15,9 +15,9 @@ public class SelectionSort {
     public int[] selection(int[] arr) {
 
         int len = arr.length;
-        int minIndex,temp;
+        int temp;
         for (int i = 0; i < len -1; i++) {
-            minIndex = i;
+            int minIndex = i;
             for (int j = minIndex + 1; j < len; j++) {
                 //寻找最小的数
                 if (arr[i] < arr[minIndex]){
@@ -25,7 +25,6 @@ public class SelectionSort {
                 }
             }
             if (i != minIndex){
-
                 temp = arr[i];
                 arr[i] = arr[minIndex];
                 arr[minIndex] = temp;
