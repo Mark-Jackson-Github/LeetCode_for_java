@@ -5,6 +5,7 @@ package gp.firstpart.singleton.lazy;
  * @Date : 2021/10/11 下午3:24
  * 懒汉单例
  * 在外部需要使用的时候才进行示例化
+ * 测试添加完成
  */
 public class LazySimpleSingleton {
 
